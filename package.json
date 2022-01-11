@@ -1,0 +1,26 @@
+{
+  "name": "w3-cypress",
+  "version": "1.0.0",
+  "description": "Ola Bale W3 Cypress Project",
+  "main": "index.js",
+  "scripts": {
+    "e2e:chrome": "cypress run --browser chrome",
+    "e2e:firefox": "cypress run --browser firefox",
+    "e2e:reports": "npx mochawesome-merge 'cypress/report/*.json' > mochawesome.json && npx marge mochawesome.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^9.2.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "jest": "^27.4.7",
+    "mochawesome": "^7.0.1",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.0.1",
+    "typescript": "^4.5.4"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "cypress/integration"
+  }
+}

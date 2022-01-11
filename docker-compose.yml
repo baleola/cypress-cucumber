@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  chrome:
+    image: "cypress/included:9.2.0"
+    working_dir: /e2e
+    command: --browser chrome
+    volumes:
+      - ./:/e2e
+
+  firefox:
+    image: "cypress/included:9.2.0"
+    working_dir: /e2e
+    command: --browser firefox
+    volumes:
+      - ./:/e2e
